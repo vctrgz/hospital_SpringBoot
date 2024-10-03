@@ -1,9 +1,9 @@
 # HOSPITAL PROJECT v1 - HEALTH DATA - SPRING-BOOT
 
 ### a. Work distribution among the different members of the group with their own project and repository:		  
-1. Information of all registered nurses -Victor  
-2. Login validation of a nurse -Albert  
-3. Search for nurses by name -Jiajiao  
+1. Information of all registered nurses **-Albert**  
+2. Login validation of a nurse **-Víctor**  
+3. Search for nurses by name **-Jiajiao**  
 4. Performance check using Postman  
           
 ### b. Group work:  
