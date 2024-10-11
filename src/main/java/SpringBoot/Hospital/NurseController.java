@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController // configured to listen for and handle HTTP requests
-@RequestMapping("/Nurse") // from url starting with
+@RequestMapping("/nurse") // from url starting with
 
 public class NurseController {
 	ArrayList <Nurse> nurses;
