@@ -2,16 +2,22 @@ package SpringBoot.Hospital;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+
 import java.util.Iterator;
 import java.util.Map;
 
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/nurse")
+
+@RestController // configured to listen for and handle HTTP requests
+@RequestMapping("/nurse") // from url starting with
+
 public class NurseController {
 	ArrayList <Nurse> nurses;
 	public NurseController() {
@@ -41,4 +47,21 @@ public class NurseController {
 		}
 		return response;
 	}
+	
+	
+	@GetMapping("/name/{name}")
+//	private ResponseEntity<String> findById() {
+	private ResponseEntity<Nurse> findByName(@PathVariable String name) {
+//	      return ResponseEntity.ok("{}");
+		for (Nurse nurse : nurses) {
+			System.out.println(nurse);
+			if (name.equals(nurse.getName())) {
+				return ResponseEntity.ok(nurse);
+			}
+		}
+		return ResponseEntity.notFound().build();
+	}
+	
+	
+	
 }
