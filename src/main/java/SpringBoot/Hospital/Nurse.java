@@ -1,7 +1,6 @@
 package SpringBoot.Hospital;
 
 public class Nurse {
-
     String name;
     String user;
     String password;
