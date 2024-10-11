@@ -1,16 +1,18 @@
 package SpringBoot.Hospital;
 
 public class Nurse {
-    String name;
-    String user;
-    String password;
+    
+    private String name;
+    private String user;
+    private String password;
 
-    public Nurse(String name, String user, String password){
+    public Nurse(String name, String user, String password) {
         this.name = name;
         this.password = password;
         this.user = user;
     }
 
+    // Getter and setter for 'name'
     public String getName() {
         return name;
     }
@@ -19,6 +21,7 @@ public class Nurse {
         this.name = name;
     }
 
+    // Getter and setter for 'user'
     public String getUser() {
         return user;
     }
@@ -27,6 +30,7 @@ public class Nurse {
         this.user = user;
     }
 
+    // Getter and setter for 'password'
     public String getPassword() {
         return password;
     }
@@ -35,3 +39,4 @@ public class Nurse {
         this.password = password;
     }
 }
+
