@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -49,7 +50,7 @@ public class NurseController {
 			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(loginCorrecto);
 		}
 	}
-
+  
     // Find nurse by name
     @GetMapping("/name/{name}")
     public ResponseEntity<Nurse> findByName(@PathVariable String name) {
@@ -61,4 +62,4 @@ public class NurseController {
         return ResponseEntity.notFound().build();
     }
 }
-	
+
