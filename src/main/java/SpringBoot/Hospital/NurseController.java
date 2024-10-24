@@ -49,16 +49,17 @@ public class NurseController {
 		}
 	}
 	
-     /*
+     
     // Find nurse by name
     @GetMapping("/name/{name}")
     public ResponseEntity<Nurse> findByName(@PathVariable String name) {
+    	nurses = getAllNurses();
         for (Nurse nurse : nurses) {
             if (name.equals(nurse.getName())) {
                 return ResponseEntity.ok(nurse);
             }
         }
         return ResponseEntity.notFound().build();
-    }*/
+    }
 }
 
