@@ -49,7 +49,6 @@ public class NurseController {
 		}
 	}
 	
-     
     // Find nurse by name
     @GetMapping("/name/{name}")
     public ResponseEntity<Nurse> findByName(@PathVariable String name) {
