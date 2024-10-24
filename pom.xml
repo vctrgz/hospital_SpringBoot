@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.4</version>
+		<version>3.3.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>SpringBoot</groupId>
@@ -53,7 +53,7 @@
 		<dependency>
         	<groupId>org.hibernate</groupId>
         	<artifactId>hibernate-core</artifactId>
-        	<version>5.6.15.Final</version>
+        	<version>6.5.3.Final</version>
     	</dependency>
 		
 		<!-- to refresh server after any change -->
