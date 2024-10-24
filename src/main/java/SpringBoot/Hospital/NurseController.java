@@ -23,7 +23,7 @@ import SpringBoot.entity.Nurse;
 public class NurseController {
     @Autowired
     private NurseRepository nurseRepository;
-    
+    private Iterable<Nurse>nurses;
 
     // Get all registered nurses
     @GetMapping("/nurses")
@@ -32,23 +32,21 @@ public class NurseController {
     }
     
     // Login functionality
-    
-     @PostMapping("/login")	
-     
+    @PostMapping("/login")	
 	public @ResponseBody ResponseEntity<Boolean> login(@RequestBody LoginRequest loginRequest) {
-//		boolean loginCorrecto = false;
-//		for (Nurse nurse : nurses) {
-//			if (nurse.getUser().equals(loginRequest.getUser()) && nurse.getPassword().equals(loginRequest.getPassword())) {
-//				loginCorrecto = true;
-//				break;
-//			}
-//		}
-//		if (loginCorrecto) {
-//			return ResponseEntity.ok(loginCorrecto);
-//		}else {
-//			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(loginCorrecto);
-//		}
-		return ResponseEntity.ok(true);
+		boolean loginCorrecto = false;
+		nurses = getAllNurses();
+		for (Nurse nurse : nurses) {
+			if (nurse.getUser().equals(loginRequest.getUser()) && nurse.getPassword().equals(loginRequest.getPassword())) {
+				loginCorrecto = true;
+				break;
+			}
+		}
+		if (loginCorrecto) {
+			return ResponseEntity.ok(loginCorrecto);
+		}else {
+			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(loginCorrecto);
+		}
 	}
 	
      /*
